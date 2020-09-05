@@ -1,15 +1,15 @@
+import { registrationFormProps } from './../../../shared/constants/registration-form';
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { loginFormProps } from './../../../shared/constants/loginForm';
 import { FormService } from './form.service';
 
 @Injectable()
-export class LoginFormService extends FormService {
+export class RegistrationFormService extends FormService {
 
-  private formProps = loginFormProps;
+  private formProps = registrationFormProps;
 
   constructor(
-    fb: FormBuilder
+    fb: FormBuilder,
   ) {
     super(fb);
     this.form$.next(this.createLoginForm(this.formProps));

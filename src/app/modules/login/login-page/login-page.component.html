@@ -1,36 +1,9 @@
-<div *ngIf="loginFormService.form$ | async as form" class="container">
-  <h2>Sign in</h2>
-  <form [formGroup]="form" (submit)="login()" class="login-form">
-    <mat-form-field>
-      <mat-label>Username</mat-label>
-      <input formControlName="name" matInput autocomplete="off">
-      <mat-error *ngIf="form.get('name').hasError('required')">
-        Username is <strong>required</strong>.
-      </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Email</mat-label>
-      <input formControlName="email" matInput autocomplete="off">
-      <mat-error *ngIf="form.get('email').hasError('required')">
-        Email is <strong>required</strong>.
-      </mat-error>
-      <mat-error *ngIf="form.get('email').hasError('email')">
-        Please, enter a valid email address.
-      </mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Password</mat-label>
-      <input formControlName="password" type="password" matInput autocomplete="off">
-      <mat-error *ngIf="form.get('password').hasError('required')">
-        Password is <strong>required</strong>.
-      </mat-error>
-    </mat-form-field>
-    <div class="row row--space-around">
-      <button type="submit" mat-raised-button color="primary">Sign In</button>
-    </div>
-    <div class="row row--space-around">
-      <button type="button" mat-button color="primary">forgot password?</button>
-      <button type="button" mat-button color="primary">register</button>
-    </div>
-  </form>
+<div class="container">
+  <ng-template #form></ng-template>
+  <div class="row row--space-around">
+    <button type="button" mat-button color="primary" (click)="renderPage(LoginPageType.ForgotPassword)">forgot
+      password?</button>
+    <button *ngIf="currentPageType === LoginPageType.SignIn" type="button" mat-button color="primary"
+      (click)="renderPage(LoginPageType.SignUp)">register</button>
+  </div>
 </div>

@@ -1,3 +1,4 @@
+import { RegistrationFormService } from './services/registration-form.service';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,9 +9,12 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginFormService } from './services/login-form.service';
 import { LoginService } from './services/login.service';
+import { RegistrationComponent } from './registration/registration.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { RegistrationService } from './services/registration.service';
 
 @NgModule({
-  declarations: [LoginPageComponent],
+  declarations: [LoginPageComponent, RegistrationComponent, SignInComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -23,6 +27,8 @@ import { LoginService } from './services/login.service';
   providers: [
     LoginFormService,
     LoginService,
+    RegistrationService,
+    RegistrationFormService,
   ]
 })
 export class LoginModule { }
