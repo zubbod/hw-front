@@ -1,0 +1,24 @@
+:host {
+  max-width: 320px;
+  margin-top: 40px;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.row {
+
+  margin-top: 12px;
+
+  button:not(:last-child) {
+    margin-right: 16px;
+  }
+}

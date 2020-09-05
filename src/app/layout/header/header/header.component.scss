@@ -1,0 +1,52 @@
+$bg: #3f51b5;
+$icon: #ffffff;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: $bg;
+
+  mat-icon {
+    color: $icon;
+  }
+
+  .logo {
+
+    cursor: pointer;
+    text-decoration: none;
+
+    mat-icon ::ng-deep {
+
+      svg path {
+        fill: $icon;
+      }
+    }
+
+    &:hover {
+
+      mat-icon ::ng-deep {
+
+        svg path {
+          fill: darken($color: $icon, $amount: 5);
+        }
+      }
+    }
+
+    &:active {
+
+      mat-icon ::ng-deep {
+
+        svg path {
+          fill: darken($color: $icon, $amount: 10);
+        }
+      }
+    }
+
+    &__icon {
+      width: 212px;
+      height: 40px;
+    }
+  }
+}
