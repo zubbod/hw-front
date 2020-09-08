@@ -1,0 +1,21 @@
+.hw {
+
+  &-card {
+    max-width: 288px;
+    margin: 16px;
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all .3s;
+    }
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #3f51b5;
+    font-size: 36px;
+  }
+}

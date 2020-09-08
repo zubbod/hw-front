@@ -1,0 +1,7 @@
+<div class="container">
+  <div *ngIf="collection.hw$ | async as list" class="hw-list">
+    <ng-container *ngFor="let item of list">
+      <app-collection-card [hw]="item"></app-collection-card>
+    </ng-container>
+  </div>
+</div>
