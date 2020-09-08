@@ -1,1 +1,18 @@
-<p>collection-card works!</p>
+<mat-card class="hw-card">
+  <mat-card-header>
+    <div mat-card-avatar class="hw-icon">
+      <mat-icon>{{ iconName }}</mat-icon>
+    </div>
+    <mat-card-title>{{ hw.manufacturer }}</mat-card-title>
+    <mat-card-subtitle>{{ hw.name }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://www.carsinmalaysia.com/media/fotos/9/fb_15523041196_34879_1_1564378554.jpg"
+    alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>{{ hw.manufacturer }}</p>
+    <p>{{ hw.produceYear }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Read more</button>
+  </mat-card-actions>
+</mat-card>

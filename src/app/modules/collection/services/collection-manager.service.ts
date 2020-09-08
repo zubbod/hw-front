@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { CarDto } from './../models/car-dto';
 import { CollectionUriService } from './collection-uri.service';
 import { CollectionService } from './collection.service';
+import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class CollectionManagerService {
@@ -15,7 +16,10 @@ export class CollectionManagerService {
   ) { }
 
   get(): Observable<CarDto[]> {
-    return this.http.get<CarDto[]>(this.uri.getCollection);
+    return this.http.get<CarDto[]>(this.uri.getCollection)
+      .pipe(
+        tap(res => this.collection.hw$.next(res))
+      );
   }
 
   add(data: CarDto): Observable<CarDto> {

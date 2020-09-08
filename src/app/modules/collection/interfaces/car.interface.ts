@@ -1,8 +1,8 @@
-import { CarType } from './../enums/car-type.enum';
+import { HWType } from './../enums/car-type.enum';
 
 export interface ICar {
   name: string;
-  type: CarType;
+  type: HWType;
   manufacturer: string;
   produceYear: string;
   createDate: Date | string;

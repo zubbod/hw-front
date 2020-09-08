@@ -1,4 +1,6 @@
+import { CollectionService } from './../../services/collection.service';
 import { Component, OnInit } from '@angular/core';
+import { CollectionManagerService } from '../../services/collection-manager.service';
 
 @Component({
   selector: 'app-collection-list',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public readonly collection: CollectionService,
+    private readonly collectionManager: CollectionManagerService,
+  ) { }
 
   ngOnInit(): void {
+    this.collectionManager.get().toPromise();
   }
 
 }
