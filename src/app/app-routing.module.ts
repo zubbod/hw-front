@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'collection',
     loadChildren: () => import('./modules/collection/collection.module').then(m => m.CollectionModule),
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./modules/create-hw/create-hw.module').then(m => m.CreateHwModule),
   }
 ];
 

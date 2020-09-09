@@ -12,6 +12,19 @@ $icon: #ffffff;
     color: $icon;
   }
 
+  .menu {
+
+    &-btn {
+      color: $icon;
+      margin-left: 12px;
+
+      &__content {
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+
   .logo {
 
     cursor: pointer;
