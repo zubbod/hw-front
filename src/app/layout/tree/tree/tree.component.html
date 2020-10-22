@@ -1,0 +1,13 @@
+<ng-container *ngIf="regionsTree">
+  <ng-container *ngFor="let regionComponent of regionsTree.getTree()">
+    <h3 style="color: brown">{{ regionComponent.name }}</h3>
+    <p *ngFor="let item of regionComponent.children">
+      <input
+        #inp
+        type="checkbox"
+        [value]="item.id"
+        [checked]="item.checked"
+      />{{ item.name }}{{ inp.value }}
+    </p>
+  </ng-container>
+</ng-container>

@@ -1,12 +1,41 @@
 <div class="container">
-  <mat-form-field>
-    <mat-label>Month and Year</mat-label>
-    <input matInput [matDatepicker]="dp" [formControl]="date" name="date">
-    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
-    <mat-datepicker #dp startView="multi-year" (yearSelected)="chosenYearHandler($event)"
-      (monthSelected)="chosenMonthHandler($event, dp)" panelClass="example-month-picker">
-    </mat-datepicker>
-  </mat-form-field>
-
+  <form action="post" class="create-form">
+    <mat-form-field>
+      <mat-label>Login</mat-label>
+      <input matInput autocomplete="off">
+      <mat-error>
+        Login is <strong>required</strong>.
+      </mat-error>
+    </mat-form-field>
+    <div class="form-control">
+      <mat-checkbox [color]="'primary'">Custom</mat-checkbox>
+    </div>
+    <div class="form-control">
+      <mat-checkbox [color]="'primary'">From comics</mat-checkbox>
+    </div>
+    <mat-form-field>
+      <mat-label>Model year</mat-label>
+      <input matInput [matDatepicker]="modelYear" [formControl]="date" name="modelYear">
+      <mat-datepicker-toggle matSuffix [for]="modelYear"></mat-datepicker-toggle>
+      <mat-datepicker #modelYear startView="year" (yearSelected)="chosenYearHandler($event)"
+        (monthSelected)="chosenMonthHandler($event, modelYear)">
+      </mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Year of production</mat-label>
+      <input matInput [matDatepicker]="modelOfProduction" [formControl]="date" name="modelOfProduction">
+      <mat-datepicker-toggle matSuffix [for]="modelOfProduction"></mat-datepicker-toggle>
+      <mat-datepicker #modelOfProduction startView="year" (yearSelected)="chosenYearHandler($event)"
+        (monthSelected)="chosenMonthHandler($event, modelOfProduction)">
+      </mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>State</mat-label>
+      <mat-select>
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
 
 </div>
