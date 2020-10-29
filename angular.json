@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "hw-front"
+  "defaultProject": "hw-front",
+  "cli": {
+    "analytics": false
+  }
 }

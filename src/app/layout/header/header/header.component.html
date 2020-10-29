@@ -1,18 +1,32 @@
   <header class="header">
 
-    <a class="logo">
+    <a class="logo" [routerLink]="['/']">
       <mat-icon class="logo__icon" svgIcon="logo" alt="Logo"></mat-icon>
     </a>
 
     <div class="menu">
-      <!-- <mat-icon>menu</mat-icon> -->
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <button mat-button class="menu-btn">
+        <span class="menu-btn__content">
+          <mat-icon>search</mat-icon>&nbsp;Search
+        </span>
+      </button>
+      <button mat-button class="menu-btn" [routerLink]="['/', 'create']">
+        <span class="menu-btn__content">
+          <mat-icon>add</mat-icon>&nbsp;Create
+        </span>
+      </button>
+      <button mat-button class="menu-btn" [routerLink]="['/', 'tree']">
+        <span class="menu-btn__content">
+          <mat-icon>account_tree</mat-icon>&nbsp;Tree
+        </span>
+      </button>
+      <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
+          <mat-icon>add</mat-icon>
+          <span>Create</span>
         </button>
         <button mat-menu-item disabled>
           <mat-icon>voicemail</mat-icon>
@@ -22,7 +36,7 @@
           <mat-icon>notifications_off</mat-icon>
           <span>Disable alerts</span>
         </button>
-      </mat-menu>
+      </mat-menu> -->
 
     </div>
 
