@@ -1,6 +1,6 @@
 export abstract class Region {
   children?: Region[];
-  checked: boolean = true;
+  checked: boolean = false;
   id: number;
   name: string;
 

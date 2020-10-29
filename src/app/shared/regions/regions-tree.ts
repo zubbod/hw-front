@@ -12,4 +12,14 @@ export class RegionsTree {
   getTree(): Region[] {
     return this.regionsTree;
   }
+
+  *[Symbol.iterator]() {
+    let result = [];
+    this.regionsTree.map((region) => {
+      result = result.concat(
+        region.children.filter((el) => el.checked).map((el) => el.id)
+      );
+    });
+    yield result;
+  }
 }
