@@ -4,12 +4,7 @@ import { TreeComponent } from './tree/tree.component';
 import { TreeRoutingModule } from './tree-routing.module';
 
 @NgModule({
-  declarations: [
-    TreeComponent
-  ],
-  imports: [
-    CommonModule,
-    TreeRoutingModule,
-  ]
+  declarations: [TreeComponent],
+  imports: [CommonModule, TreeRoutingModule],
 })
-export class TreeModule { }
+export class TreeModule {}

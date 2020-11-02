@@ -1,6 +1,6 @@
 {
-  "name": "custom-layout",
-  "version": "0.0.1",
+  "name": "@zb/custom-layout",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^10.0.14",
     "@angular/core": "^10.0.14"
@@ -8,12 +8,12 @@
   "dependencies": {
     "tslib": "^2.0.0"
   },
-  "main": "bundles/custom-layout.umd.js",
-  "module": "fesm2015/custom-layout.js",
-  "es2015": "fesm2015/custom-layout.js",
-  "esm2015": "esm2015/custom-layout.js",
-  "fesm2015": "fesm2015/custom-layout.js",
-  "typings": "custom-layout.d.ts",
+  "main": "bundles/zb-custom-layout.umd.js",
+  "module": "fesm2015/zb-custom-layout.js",
+  "es2015": "fesm2015/zb-custom-layout.js",
+  "esm2015": "esm2015/zb-custom-layout.js",
+  "fesm2015": "fesm2015/zb-custom-layout.js",
+  "typings": "zb-custom-layout.d.ts",
   "sideEffects": false,
   "scripts": {
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"

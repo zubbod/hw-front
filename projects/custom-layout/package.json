@@ -1,10 +1,10 @@
 {
-  "name": "custom-layout",
-  "version": "0.0.1",
+  "name": "@zb/custom-layout",
+  "version": "0.0.2",
   "scripts": {
     "build": "ng build --project=custom-layout",
     "pack": "npm pack ../libs/custom-layout",
-    "rebuild": "npm run build && npm run pack && cd ../../ && npm i ./projects/custom-layout  "
+    "rebuild": "npm run build && npm run pack && cd ../../ && npm i ./projects/custom-layout/zb-custom-layout-0.0.2.tgz"
   },
   "peerDependencies": {
     "@angular/common": "^10.0.14",

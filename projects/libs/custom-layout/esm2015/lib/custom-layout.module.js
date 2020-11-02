@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CustomLayoutComponent } from './custom-layout.component';
+import { CommonModule } from '@angular/common';
 import * as i0 from "@angular/core";
 export class CustomLayoutModule {
 }
 CustomLayoutModule.ɵmod = i0.ɵɵdefineNgModule({ type: CustomLayoutModule });
-CustomLayoutModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CustomLayoutModule_Factory(t) { return new (t || CustomLayoutModule)(); }, imports: [[]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CustomLayoutModule, { declarations: [CustomLayoutComponent], exports: [CustomLayoutComponent] }); })();
+CustomLayoutModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CustomLayoutModule_Factory(t) { return new (t || CustomLayoutModule)(); }, imports: [[CommonModule]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CustomLayoutModule, { declarations: [CustomLayoutComponent], imports: [CommonModule], exports: [CustomLayoutComponent] }); })();
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CustomLayoutModule, [{
         type: NgModule,
         args: [{
                 declarations: [CustomLayoutComponent],
-                imports: [],
-                exports: [CustomLayoutComponent]
+                imports: [CommonModule],
+                exports: [CustomLayoutComponent],
             }]
     }], null, null); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLWxheW91dC5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiL2hvbWUvemIvRG9jdW1lbnRzL2h3LWZyb250L3Byb2plY3RzL2N1c3RvbS1sYXlvdXQvc3JjLyIsInNvdXJjZXMiOlsibGliL2N1c3RvbS1sYXlvdXQubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFDekMsT0FBTyxFQUFFLHFCQUFxQixFQUFFLE1BQU0sMkJBQTJCLENBQUM7O0FBVWxFLE1BQU0sT0FBTyxrQkFBa0I7O3NEQUFsQixrQkFBa0I7bUhBQWxCLGtCQUFrQixrQkFKcEIsRUFDUjt3RkFHVSxrQkFBa0IsbUJBTGQscUJBQXFCLGFBRzFCLHFCQUFxQjtrREFFcEIsa0JBQWtCO2NBTjlCLFFBQVE7ZUFBQztnQkFDUixZQUFZLEVBQUUsQ0FBQyxxQkFBcUIsQ0FBQztnQkFDckMsT0FBTyxFQUFFLEVBQ1I7Z0JBQ0QsT0FBTyxFQUFFLENBQUMscUJBQXFCLENBQUM7YUFDakMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgQ3VzdG9tTGF5b3V0Q29tcG9uZW50IH0gZnJvbSAnLi9jdXN0b20tbGF5b3V0LmNvbXBvbmVudCc7XG5cblxuXG5ATmdNb2R1bGUoe1xuICBkZWNsYXJhdGlvbnM6IFtDdXN0b21MYXlvdXRDb21wb25lbnRdLFxuICBpbXBvcnRzOiBbXG4gIF0sXG4gIGV4cG9ydHM6IFtDdXN0b21MYXlvdXRDb21wb25lbnRdXG59KVxuZXhwb3J0IGNsYXNzIEN1c3RvbUxheW91dE1vZHVsZSB7IH1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLWxheW91dC5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiL2hvbWUvemIvRG9jdW1lbnRzL2h3LWZyb250L3Byb2plY3RzL2N1c3RvbS1sYXlvdXQvc3JjLyIsInNvdXJjZXMiOlsibGliL2N1c3RvbS1sYXlvdXQubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxRQUFRLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFDekMsT0FBTyxFQUFFLHFCQUFxQixFQUFFLE1BQU0sMkJBQTJCLENBQUM7QUFDbEUsT0FBTyxFQUFFLFlBQVksRUFBRSxNQUFNLGlCQUFpQixDQUFDOztBQU8vQyxNQUFNLE9BQU8sa0JBQWtCOztzREFBbEIsa0JBQWtCO21IQUFsQixrQkFBa0Isa0JBSHBCLENBQUMsWUFBWSxDQUFDO3dGQUdaLGtCQUFrQixtQkFKZCxxQkFBcUIsYUFDMUIsWUFBWSxhQUNaLHFCQUFxQjtrREFFcEIsa0JBQWtCO2NBTDlCLFFBQVE7ZUFBQztnQkFDUixZQUFZLEVBQUUsQ0FBQyxxQkFBcUIsQ0FBQztnQkFDckMsT0FBTyxFQUFFLENBQUMsWUFBWSxDQUFDO2dCQUN2QixPQUFPLEVBQUUsQ0FBQyxxQkFBcUIsQ0FBQzthQUNqQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDdXN0b21MYXlvdXRDb21wb25lbnQgfSBmcm9tICcuL2N1c3RvbS1sYXlvdXQuY29tcG9uZW50JztcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XG5cbkBOZ01vZHVsZSh7XG4gIGRlY2xhcmF0aW9uczogW0N1c3RvbUxheW91dENvbXBvbmVudF0sXG4gIGltcG9ydHM6IFtDb21tb25Nb2R1bGVdLFxuICBleHBvcnRzOiBbQ3VzdG9tTGF5b3V0Q29tcG9uZW50XSxcbn0pXG5leHBvcnQgY2xhc3MgQ3VzdG9tTGF5b3V0TW9kdWxlIHt9XG4iXX0=

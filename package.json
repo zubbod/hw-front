@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~10.0.14",
     "@angular/router": "~10.0.14",
     "@types/moment": "^2.13.0",
+    "@zb/custom-layout": "file:projects/custom-layout/zb-custom-layout-0.0.2.tgz",
     "custom-layout": "file:projects/custom-layout",
     "moment": "^2.27.0",
     "rxjs": "~6.5.5",

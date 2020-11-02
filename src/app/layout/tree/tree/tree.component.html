@@ -1,3 +1,5 @@
+<button (click)="show($event)">open overlay</button>
+
 <ng-container *ngIf="regionsTree">
   <ng-container *ngFor="let regionComponent of regionsTree">
     <h3 style="color: brown">{{ regionComponent.name }}</h3>
