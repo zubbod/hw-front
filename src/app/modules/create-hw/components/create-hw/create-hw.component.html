@@ -1,41 +1,77 @@
 <div class="container">
-  <form action="post" class="create-form">
+  <form *ngIf="form.form$ | async as creationForm" action="post" class="create-form">
     <mat-form-field>
-      <mat-label>Login</mat-label>
-      <input matInput autocomplete="off">
-      <mat-error>
-        Login is <strong>required</strong>.
-      </mat-error>
+      <mat-label>Manufacturer</mat-label>
+      <input matInput autocomplete="off" [formControl]="creationForm.controls['manufacturer']" />
+      <mat-error> Manufacturer is <strong>required</strong>. </mat-error>
     </mat-form-field>
-    <div class="form-control">
+    <mat-form-field>
+      <mat-label>Model</mat-label>
+      <input matInput autocomplete="off" [formControl]="creationForm.controls['name']" />
+      <mat-error> Model is <strong>required</strong>. </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Year</mat-label>
+      <input matInput autocomplete="off" [formControl]="creationForm.controls['produceYear']" />
+      <mat-error> Year is <strong>required</strong>. </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select [formControl]="creationForm.controls['type']">
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{ type.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error> Type is <strong>required</strong>.</mat-error>
+    </mat-form-field>
+    <button
+      type="button"
+      mat-raised-button
+      color="primary"
+      (click)="save(creationForm.getRawValue())"
+    >
+      save
+    </button>
+    <!-- <div class="form-control">
       <mat-checkbox [color]="'primary'">Custom</mat-checkbox>
     </div>
     <div class="form-control">
       <mat-checkbox [color]="'primary'">From comics</mat-checkbox>
-    </div>
-    <mat-form-field>
+    </div> -->
+    <!-- <mat-form-field>
       <mat-label>Model year</mat-label>
-      <input matInput [matDatepicker]="modelYear" [formControl]="date" name="modelYear">
-      <mat-datepicker-toggle matSuffix [for]="modelYear"></mat-datepicker-toggle>
-      <mat-datepicker #modelYear startView="year" (yearSelected)="chosenYearHandler($event)"
-        (monthSelected)="chosenMonthHandler($event, modelYear)">
+      <input
+        matInput
+        [matDatepicker]="modelYear"
+        [formControl]="date"
+        name="modelYear"
+      />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="modelYear"
+      ></mat-datepicker-toggle>
+      <mat-datepicker
+        #modelYear
+        startView="year"
+        (yearSelected)="chosenYearHandler($event)"
+        (monthSelected)="chosenMonthHandler($event, modelYear)"
+      >
       </mat-datepicker>
-    </mat-form-field>
-    <mat-form-field>
+    </mat-form-field> -->
+    <!-- <mat-form-field>
       <mat-label>Year of production</mat-label>
       <input matInput [matDatepicker]="modelOfProduction" [formControl]="date" name="modelOfProduction">
       <mat-datepicker-toggle matSuffix [for]="modelOfProduction"></mat-datepicker-toggle>
       <mat-datepicker #modelOfProduction startView="year" (yearSelected)="chosenYearHandler($event)"
         (monthSelected)="chosenMonthHandler($event, modelOfProduction)">
       </mat-datepicker>
-    </mat-form-field>
-    <mat-form-field>
+    </mat-form-field> -->
+    <!-- <mat-form-field>
       <mat-label>State</mat-label>
       <mat-select>
         <mat-option>None</mat-option>
         <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
       </mat-select>
-    </mat-form-field>
+    </mat-form-field> -->
   </form>
-
 </div>

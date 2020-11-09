@@ -1,5 +1,5 @@
 import { Validators } from '@angular/forms';
-export interface ILoginFormProps {
+export interface IFormProps {
   controlName: string;
   controlValue: string;
   validators: Validators[];

@@ -9,11 +9,11 @@ import { CreateHwComponent } from './components/create-hw/create-hw.component';
 import { CreateHwRoutingModule } from './create-hw-routing.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { CreateHWFormService } from './services/create-hw-form.service';
 
 @NgModule({
-  declarations: [
-    CreateHwComponent
-  ],
+  declarations: [CreateHwComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -24,7 +24,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatMomentDateModule,
     MatCheckboxModule,
-    MatSelectModule
-  ]
+    MatSelectModule,
+    MatButtonModule,
+  ],
+  providers: [CreateHWFormService],
 })
-export class CreateHwModule { }
+export class CreateHwModule {}

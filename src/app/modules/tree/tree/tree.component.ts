@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RegionsTree } from './../../../shared/regions/regions-tree';
-import { TreeService } from './../services/tree.service';
+import { RegionsTree } from '../../../shared/regions/regions-tree';
+import { TreeService } from '../services/tree.service';
 import { RegionsIterator } from '../../../shared/regions/regions-iterator';
 import { Region } from '../../../shared/regions/region';
 

@@ -130,6 +130,46 @@
           }
         }
       }
+    },
+    "custom-layout": {
+      "projectType": "library",
+      "root": "projects/custom-layout",
+      "sourceRoot": "projects/custom-layout/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/custom-layout/tsconfig.lib.json",
+            "project": "projects/custom-layout/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/custom-layout/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/custom-layout/src/test.ts",
+            "tsConfig": "projects/custom-layout/tsconfig.spec.json",
+            "karmaConfig": "projects/custom-layout/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/custom-layout/tsconfig.lib.json",
+              "projects/custom-layout/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "hw-front",

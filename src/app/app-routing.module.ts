@@ -9,24 +9,32 @@ const routes: Routes = [
   // },
   {
     path: 'login',
-    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule),
+    loadChildren: () =>
+      import('./modules/login/login.module').then((m) => m.LoginModule),
   },
   {
     path: 'collection',
-    loadChildren: () => import('./modules/collection/collection.module').then(m => m.CollectionModule),
+    loadChildren: () =>
+      import('./modules/collection/collection.module').then(
+        (m) => m.CollectionModule
+      ),
   },
   {
     path: 'create',
-    loadChildren: () => import('./modules/create-hw/create-hw.module').then(m => m.CreateHwModule),
+    loadChildren: () =>
+      import('./modules/create-hw/create-hw.module').then(
+        (m) => m.CreateHwModule
+      ),
   },
   {
     path: 'tree',
-    loadChildren: () => import('./layout/tree/tree.module').then(m => m.TreeModule),
-  }
+    loadChildren: () =>
+      import('./modules/tree/tree.module').then((m) => m.TreeModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
