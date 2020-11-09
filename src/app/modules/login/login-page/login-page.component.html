@@ -1,9 +1,22 @@
 <div class="container">
   <ng-template #form></ng-template>
   <div class="row row--space-around">
-    <button type="button" mat-button color="primary" (click)="renderPage(LoginPageType.ForgotPassword)">forgot
-      password?</button>
-    <button *ngIf="currentPageType === LoginPageType.SignIn" type="button" mat-button color="primary"
-      (click)="renderPage(LoginPageType.SignUp)">register</button>
+    <button
+      type="button"
+      mat-button
+      color="primary"
+      (click)="renderPage(LoginPageType.ForgotPassword)"
+    >
+      forgot password?
+    </button>
+    <button
+      *ngIf="currentPageType === LoginPageType.SignIn"
+      type="button"
+      mat-button
+      color="primary"
+      (click)="renderPage(LoginPageType.SignUp)"
+    >
+      register
+    </button>
   </div>
 </div>

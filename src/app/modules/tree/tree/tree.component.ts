@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { RegionsTree } from './../../../shared/regions/regions-tree';
-import { TreeService } from './../services/tree.service';
+import { RegionsTree } from '../../../shared/regions/regions-tree';
+import { TreeService } from '../services/tree.service';
 import { RegionsIterator } from '../../../shared/regions/regions-iterator';
 import { Region } from '../../../shared/regions/region';
-import { CustomLayoutService } from '@zb/custom-layout';
-import { TooltipComponent } from '../../../shared/components/tooltip/tooltip.component';
 
 @Component({
   selector: 'app-tree',
@@ -14,10 +12,7 @@ import { TooltipComponent } from '../../../shared/components/tooltip/tooltip.com
 export class TreeComponent implements OnInit {
   regionsTree: Region[];
 
-  constructor(
-    public treeService: TreeService,
-    private popper: CustomLayoutService
-  ) {}
+  constructor(public treeService: TreeService) {}
 
   async ngOnInit() {
     const tree = new RegionsTree(
@@ -58,14 +53,4 @@ export class TreeComponent implements OnInit {
       res = iterator.next();
     }
   };
-
-  show(event) {
-    const overlayRef = this.popper.open({
-      element: event.target,
-      data: 'string-string',
-      content: TooltipComponent,
-    });
-
-    overlayRef.afterClose$.subscribe((data) => console.log(data));
-  }
 }

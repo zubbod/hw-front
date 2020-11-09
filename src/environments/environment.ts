@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  imgUri: 'assets/images'
+  imgUri: 'assets/images',
+  apiUri: 'http://localhost:3000/api/',
 };
 
 /*
