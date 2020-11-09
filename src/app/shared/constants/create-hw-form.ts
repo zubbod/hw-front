@@ -7,8 +7,8 @@ export const createHWFormProps: Record<string, IFormProps> = {
     controlValue: '',
     validators: [Validators.required],
   },
-  year: {
-    controlName: 'year',
+  produceYear: {
+    controlName: 'produceYear',
     controlValue: '',
     validators: [Validators.required],
   },
