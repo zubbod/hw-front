@@ -11,11 +11,18 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": ["es2018", "dom"],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "paths": {
       "custom-layout": [
         "dist/custom-layout/custom-layout",
         "dist/custom-layout"
+      ],
+      "file-upload": [
+        "dist/file-upload/file-upload",
+        "dist/file-upload"
       ]
     }
   }
