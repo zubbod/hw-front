@@ -24,6 +24,7 @@
       </mat-select>
       <mat-error> Type is <strong>required</strong>.</mat-error>
     </mat-form-field>
+    <lib-file-uploader class="file-uploader form-control"></lib-file-uploader>
     <button
       type="button"
       mat-raised-button
@@ -32,46 +33,5 @@
     >
       save
     </button>
-    <!-- <div class="form-control">
-      <mat-checkbox [color]="'primary'">Custom</mat-checkbox>
-    </div>
-    <div class="form-control">
-      <mat-checkbox [color]="'primary'">From comics</mat-checkbox>
-    </div> -->
-    <!-- <mat-form-field>
-      <mat-label>Model year</mat-label>
-      <input
-        matInput
-        [matDatepicker]="modelYear"
-        [formControl]="date"
-        name="modelYear"
-      />
-      <mat-datepicker-toggle
-        matSuffix
-        [for]="modelYear"
-      ></mat-datepicker-toggle>
-      <mat-datepicker
-        #modelYear
-        startView="year"
-        (yearSelected)="chosenYearHandler($event)"
-        (monthSelected)="chosenMonthHandler($event, modelYear)"
-      >
-      </mat-datepicker>
-    </mat-form-field> -->
-    <!-- <mat-form-field>
-      <mat-label>Year of production</mat-label>
-      <input matInput [matDatepicker]="modelOfProduction" [formControl]="date" name="modelOfProduction">
-      <mat-datepicker-toggle matSuffix [for]="modelOfProduction"></mat-datepicker-toggle>
-      <mat-datepicker #modelOfProduction startView="year" (yearSelected)="chosenYearHandler($event)"
-        (monthSelected)="chosenMonthHandler($event, modelOfProduction)">
-      </mat-datepicker>
-    </mat-form-field> -->
-    <!-- <mat-form-field>
-      <mat-label>State</mat-label>
-      <mat-select>
-        <mat-option>None</mat-option>
-        <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
-      </mat-select>
-    </mat-form-field> -->
   </form>
 </div>

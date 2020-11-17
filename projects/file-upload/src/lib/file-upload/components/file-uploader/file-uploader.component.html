@@ -1,0 +1,30 @@
+<div class="file-uploader-wrapper">
+  <input
+    type="file"
+    hidden
+    #fileInp
+    (change)="filesChange($event.target.files)"
+    multiple="false"
+    accept=".jpeg, .jpg, .png, .webp"
+  />
+  <button
+    class="select-file-button"
+    type="button"
+    color="primary"
+    mat-raised-button
+    (click)="fileInp.click()"
+  >
+    <mat-icon>get_app</mat-icon>Select a file
+  </button>
+</div>
+<ng-container *ngIf="files.length">
+  <div class="files-preview">
+    <div *ngFor="let file of files" class="file-preview">
+      <img class="file-preview__img" [src]="file.src" [alt]="file.name" />
+      <div class="file-preview__info">
+        <p class="file-preview__info-name">{{ file.name }}</p>
+        <p class="file-preview__info-size">{{ file.size }}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>
