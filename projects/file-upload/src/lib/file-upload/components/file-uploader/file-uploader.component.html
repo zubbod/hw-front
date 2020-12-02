@@ -1,20 +1,23 @@
 <div class="file-uploader-wrapper">
-  <input
-    type="file"
-    hidden
-    #fileInp
-    (change)="filesChange($event.target.files)"
-    multiple="false"
-    accept=".jpeg, .jpg, .png, .webp"
-  />
+  <form enctype="multipart/form-data">
+    <input
+      type="file"
+      hidden
+      #fileInp
+      (change)="filesChange($event.target.files)"
+      [multiple]="isMultiple"
+      [accept]="acceptedFiles"
+    />
+  </form>
   <button
+    *ngIf="!isAllLoaded"
     class="select-file-button"
     type="button"
     color="primary"
     mat-raised-button
     (click)="fileInp.click()"
   >
-    <mat-icon>get_app</mat-icon>Select a file
+    <mat-icon>publish</mat-icon>Select a file
   </button>
 </div>
 <ng-container *ngIf="files.length">
@@ -24,6 +27,19 @@
       <div class="file-preview__info">
         <p class="file-preview__info-name">{{ file.name }}</p>
         <p class="file-preview__info-size">{{ file.size }}</p>
+        <div class="progress">
+          <span class="progress__line" [ngStyle]="{ width: file.progress + '%' }"></span>
+        </div>
+      </div>
+      <div class="upload">
+        <button
+          mat-button
+          class="upload__button"
+          type="button"
+          (click)="!file.isUploaded ? upload(file) : delete(file)"
+        >
+          <mat-icon>{{ file.isUploaded ? 'delete' : 'publish' }}</mat-icon>
+        </button>
       </div>
     </div>
   </div>

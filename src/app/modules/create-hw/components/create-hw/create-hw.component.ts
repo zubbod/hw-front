@@ -13,7 +13,7 @@ import { CreateHWService } from '../../services/create-hw-service';
 })
 export class CreateHwComponent implements OnInit {
   constructor(
-    public form: CreateHWFormService,
+    public formService: CreateHWFormService,
     private config: ConfigService,
     private hw: CreateHWService,
   ) {}
@@ -21,10 +21,24 @@ export class CreateHwComponent implements OnInit {
   checked = true;
   date = new FormControl(moment());
   types = this.config.getConfig().hwTypes;
+  imageSrc = '';
 
   ngOnInit(): void {}
 
   save = async (value) => {
+    console.log('value');
+    this.formService.form.markAllAsTouched();
+
+    if (this.formService.form.invalid) {
+      return;
+    }
+
     await this.hw.create(value).toPromise();
+  };
+
+  drawImage = (filePath: string) => {
+    this.imageSrc = filePath;
+    this.formService.setControlValue('filePath', filePath);
+    this.formService.form;
   };
 }

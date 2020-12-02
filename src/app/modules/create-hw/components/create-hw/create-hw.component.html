@@ -1,5 +1,5 @@
 <div class="container">
-  <form *ngIf="form.form$ | async as creationForm" action="post" class="create-form">
+  <form *ngIf="formService.form$ | async as creationForm" action="post" class="create-form">
     <mat-form-field>
       <mat-label>Manufacturer</mat-label>
       <input matInput autocomplete="off" [formControl]="creationForm.controls['manufacturer']" />
@@ -24,7 +24,10 @@
       </mat-select>
       <mat-error> Type is <strong>required</strong>.</mat-error>
     </mat-form-field>
-    <lib-file-uploader class="file-uploader form-control"></lib-file-uploader>
+    <lib-file-uploader
+      class="file-uploader form-control"
+      (fileUpload)="drawImage($event)"
+    ></lib-file-uploader>
     <button
       type="button"
       mat-raised-button
