@@ -6,14 +6,15 @@ import { HWType } from '../../enums/car-type.enum';
 @Component({
   selector: 'app-collection-card',
   templateUrl: './collection-card.component.html',
-  styleUrls: ['./collection-card.component.scss']
+  styleUrls: ['./collection-card.component.scss'],
 })
 export class CollectionCardComponent implements OnInit {
-
   @Input() hw: CarDto;
   iconName = '';
+  defaultPath =
+    'https://www.carsinmalaysia.com/media/fotos/9/fb_15523041196_34879_1_1564378554.jpg';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.getIconName(this.hw.type);
@@ -38,5 +39,4 @@ export class CollectionCardComponent implements OnInit {
         break;
     }
   }
-
 }

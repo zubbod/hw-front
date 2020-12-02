@@ -22,6 +22,12 @@
     },
     {
       "path": "./projects/custom-layout/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/file-upload/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/file-upload/tsconfig.spec.json"
     }
   ]
 }

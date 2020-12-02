@@ -11,6 +11,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { CreateHWFormService } from './services/create-hw-form.service';
+import { FileUploadModule } from '@zb/file-upload';
+// import { FileUploadModule } from './../../../../projects/file-upload/src/lib/file-upload/file-upload.module';
 
 @NgModule({
   declarations: [CreateHwComponent],
@@ -26,6 +28,7 @@ import { CreateHWFormService } from './services/create-hw-form.service';
     MatCheckboxModule,
     MatSelectModule,
     MatButtonModule,
+    FileUploadModule,
   ],
   providers: [CreateHWFormService],
 })

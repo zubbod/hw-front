@@ -6,8 +6,7 @@
     <mat-card-title>{{ hw.manufacturer }}</mat-card-title>
     <mat-card-subtitle>{{ hw.name }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://www.carsinmalaysia.com/media/fotos/9/fb_15523041196_34879_1_1564378554.jpg"
-    alt="Photo of a Shiba Inu">
+  <img mat-card-image [src]="hw.filePath || defaultPath" alt="" width="288px" />
   <mat-card-content>
     <p>{{ hw.manufacturer }}</p>
     <p>{{ hw.produceYear }}</p>

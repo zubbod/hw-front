@@ -1,0 +1,16 @@
+{
+  "name": "@zb/file-upload",
+  "version": "0.0.2",
+  "peerDependencies": {
+    "@angular/common": "^10.0.14",
+    "@angular/core": "^10.0.14"
+  },
+  "scripts": {
+    "build": "ng build --project file-upload",
+    "pack": "npm pack ../libs/file-upload",
+    "rebuild": "npm run build && npm run pack && cd ../../ && npm i ./projects/file-upload/zb-file-upload-*.tgz"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

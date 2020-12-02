@@ -22,4 +22,9 @@ export const createHWFormProps: Record<string, IFormProps> = {
     controlValue: '',
     validators: [Validators.required],
   },
+  filePath: {
+    controlName: 'filePath',
+    controlValue: '',
+    validators: [Validators.required],
+  },
 };
