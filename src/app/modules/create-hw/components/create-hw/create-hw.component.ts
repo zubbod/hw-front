@@ -26,7 +26,7 @@ export class CreateHwComponent implements OnInit {
   ngOnInit(): void {}
 
   save = async (value) => {
-    console.log('value');
+    console.log(value);
     this.formService.form.markAllAsTouched();
 
     if (this.formService.form.invalid) {

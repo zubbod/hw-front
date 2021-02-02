@@ -27,4 +27,9 @@ export const createHWFormProps: Record<string, IFormProps> = {
     controlValue: '',
     validators: [Validators.required],
   },
+  code: {
+    controlName: 'code',
+    controlValue: '',
+    validators: [Validators.required],
+  },
 };

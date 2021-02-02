@@ -9,27 +9,17 @@ const routes: Routes = [
   // },
   {
     path: 'login',
-    loadChildren: () =>
-      import('./modules/login/login.module').then((m) => m.LoginModule),
+    loadChildren: () => import('./modules/login/login.module').then((m) => m.LoginModule),
   },
   {
     path: 'collection',
     loadChildren: () =>
-      import('./modules/collection/collection.module').then(
-        (m) => m.CollectionModule
-      ),
+      import('./modules/collection/collection.module').then((m) => m.CollectionModule),
   },
   {
     path: 'create',
     loadChildren: () =>
-      import('./modules/create-hw/create-hw.module').then(
-        (m) => m.CreateHwModule
-      ),
-  },
-  {
-    path: 'tree',
-    loadChildren: () =>
-      import('./modules/tree/tree.module').then((m) => m.TreeModule),
+      import('./modules/create-hw/create-hw.module').then((m) => m.CreateHwModule),
   },
 ];
 

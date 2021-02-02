@@ -1,32 +1,12 @@
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { throwError } from 'rxjs';
 import { catchError, filter, map } from 'rxjs/operators';
 import { isNullOrUndefined } from 'util';
-
-export interface IUploadFile {
-  size: string;
-  name: string;
-  src: SafeResourceUrl;
-  data: Blob;
-  progress?: number;
-  isUploaded?: boolean;
-  filePath?: string;
-  fileName?: string;
-}
-
-export class SaveFileResponseDto {
-  success = false;
-  filePath = '';
-  fileName = '';
-}
-
-export class DeleteFileResponseDto {
-  success = false;
-  fileName = '';
-  message = '';
-}
+import { IUploadFile } from '../../interfaces/upload-file.interface';
+import { DeleteFileResponseDto } from '../../models/delete-file-response-dto';
+import { SaveFileResponseDto } from '../../models/save-file-response-dto';
 
 @Component({
   selector: 'lib-file-uploader',
@@ -40,6 +20,7 @@ export class FileUploaderComponent implements OnInit {
   isUploading = false;
   isAllLoaded = false;
   private fileList: FileList;
+  // todo move to injectors
   private readonly uploadUri = 'http://localhost:3000/api/file/upload';
   private readonly deleteUri = 'http://localhost:3000/api/file/delete';
 
