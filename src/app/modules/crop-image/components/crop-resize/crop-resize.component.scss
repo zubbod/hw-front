@@ -1,0 +1,47 @@
+.crop-wrapper {
+  position: relative;
+  width: 50vw;
+  height: 70vh;
+  margin: 16px;
+  background: white;
+  // background-image: linear-gradient(#ccc 1px, transparent 1px),
+  //   linear-gradient(90deg, #ccc 1px, transparent 1px);
+  // background-size: 9px 9px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAA3NCSVQICAjb4U/gAAAABlBMVEXMzMz////TjRV2AAAACXBIWXMAAArrAAAK6wGCiw1aAAAAHHRFWHRTb2Z0d2FyZQBBZG9iZSBGaXJld29ya3MgQ1M26LyyjAAAABFJREFUCJlj+M/AgBVhF/0PAH6/D/HkDxOGAAAAAElFTkSuQmCC);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: transparent;
+  box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6);
+  z-index: 10;
+
+  &:hover {
+    outline: 1px #39f dashed;
+  }
+}
+
+.crop-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.crop-img {
+  display: block;
+}

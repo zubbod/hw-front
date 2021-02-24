@@ -8,6 +8,11 @@ const routes: Routes = [
   //   pathMatch: 'full',
   // },
   {
+    path: '',
+    loadChildren: () =>
+      import('./modules/crop-image/crop-image.module').then((m) => m.CropImageModule),
+  },
+  {
     path: 'login',
     loadChildren: () => import('./modules/login/login.module').then((m) => m.LoginModule),
   },
