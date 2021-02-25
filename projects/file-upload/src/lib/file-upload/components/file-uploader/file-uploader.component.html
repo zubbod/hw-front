@@ -16,7 +16,7 @@
     <mat-icon>publish</mat-icon>Select a file
   </button>
 </div>
-<lib-file-actions></lib-file-actions>
+<lib-file-actions [drawingImgFile]="files[0]"></lib-file-actions>
 <ng-container *ngIf="files.length">
   <div class="files-preview">
     <div *ngFor="let file of files"
