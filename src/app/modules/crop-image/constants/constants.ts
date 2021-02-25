@@ -1,9 +1,9 @@
 import { ControlId, Position } from '../enums/enums';
 import { Control } from '../types/types';
 
-export const DEFAULT_CONTROL_RECT_SIZE = '10px';
+export const DEFAULT_CONTROL_RECT_SIZE = '6px';
 
-export const DEFAULT_CONTROL_TRANSITION = '-5px';
+export const DEFAULT_CONTROL_TRANSITION = '-3px';
 
 export const DEFAULT_SIZES = {
   width: 320,

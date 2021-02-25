@@ -80,9 +80,25 @@ export class ResizeDirective implements AfterViewInit {
     this.resizeMode = false;
   };
 
-  @HostListener('mousewheel', ['$event']) resizeImage = (event: WheelEvent): void => {
+  @HostListener('DOMMouseScroll', ['$event'])
+  resizeImageFF = (event: WheelEvent): void => {
+    if (!(event.target as HTMLElement).parentElement.contains(this.imgRef)) {
+      return;
+    }
+    event.preventDefault();
     if (this.resizeOnScroll) {
-      this.imgRef.width += event.deltaY / 5;
+      this.imgRef.width += -event.detail * 2;
+    }
+  };
+
+  @HostListener('mousewheel', ['$event'])
+  resizeImageChrome = (event: WheelEvent): void => {
+    if (!(event.target as HTMLElement).parentElement.contains(this.imgRef)) {
+      return;
+    }
+    event.preventDefault();
+    if (this.resizeOnScroll) {
+      this.imgRef.width += -event.deltaY / 5;
     }
   };
 

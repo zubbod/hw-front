@@ -1,6 +1,22 @@
 <div class="crop-wrapper">
-  <div #wrapper class="crop-container">
-    <div #rect move resize class="rect" [imgRef]="image"></div>
-    <div class="overlay"></div>
+  <div #wrapper
+       class="crop-container">
+    <div #rect
+         move
+         resize
+         class="rect"
+         [imgRef]="image">
+      <span class="mesurements">w: {{rect.clientWidth}}, h: {{rect.clientHeight}}</span>
+    </div>
   </div>
+  <aside class="side-bar">
+    <button (click)="cropImage()"
+            color="primary"
+            mat-raised-button
+            type="button">
+      <mat-icon>crop</mat-icon>
+    </button>
+  </aside>
 </div>
+<picture #preview
+         class="preview"></picture>
